@@ -1,0 +1,91 @@
+// Color scheme:
+$primary: #ffcceb;
+$accent: #2a134e;
+$text-color: rgb(0, 0, 0);
+$body-color: #ffff;
+
+// Font
+$font: "Libre Baskerville", serif;
+
+$font-weights: (
+  "regular": 400,
+  "italic": 400,
+  "bold": 700,
+);
+
+$font-size: (
+  "headline": 32px,
+  "title": 26px,
+  "required-text": 20px,
+  "text": 16px,
+  "small-text": 12px,
+);
+
+@function weight($weight-names) {
+  @return map-get($font-weights, $weight-names);
+}
+
+@function fontSize($size-name) {
+  @return map-get($font-size, $size-name);
+}
+
+// Mixins
+
+@mixin transition-ease() {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin btn {
+  width: 200px;
+  height: 40px;
+  background-color: $accent;
+  z-index: 1;
+  outline: none;
+  border: none;
+  color: $body-color;
+  border-radius: 5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  // transform: translateZ(0);
+  @include transition-ease;
+}
+
+@mixin btnHover {
+  background-color: $primary;
+  color: $accent;
+  transform: scale(1.016);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  @include transition-ease;
+}
+
+// Responsive
+// $mobile-menu: 855px;
+// $tab-sm: 695px;
+// $mobile-sm: 320px;
+// $mobile-md: 375px;
+// $mobile-lg: 425px;
+
+// Mixins
+
+// @mixin transition-ease {
+//   transition: all 0.5s ease-in-out;
+// }
+// @mixin transition-slow {
+//   transition: all 1s ease-in-out;
+// }
+// @mixin transition-slower {
+//   transition: all 1.5s ease-in-out;
+// }
+// @mixin coloredBorders($width, $height, $top, $left, $bkcolor) {
+//   content: "";
+//   position: absolute;
+//   width: $width;
+//   height: $height;
+//   top: $top;
+//   left: $left;
+//   opacity: 0.98;
+//   background-color: $bkcolor;
+//   box-sizing: border-box;
+// }

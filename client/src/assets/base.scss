@@ -1,1 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
 @import "./variables.scss";
+@import "./homepage";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: $primary;
+  position: relative;
+  overflow-x: hidden;
+  color: $text-color;
+  font-family: $font;
+  // overflow-y:hidden;
+}
+
+h1,
+h2 {
+  font-weight: weight(regular);
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+h1 {
+  font-size: fontSize(headline);
+}
+h2 {
+  font-size: fontSize(title);
+}
+h3 {
+  font-size: fontSize(required-text);
+  font-weight: weight(bold);
+  line-height: 1.8;
+  letter-spacing: 0.2rem;
+}
+h4 {
+  font-size: fontSize(small-text);
+  font-weight: weight(bold);
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+p {
+  font-size: fontSize(text);
+  font-weight: weight(regular);
+  line-height: 1.8;
+  letter-spacing: 0.2rem;
+}
+a {
+  text-decoration: none;
+  color: $accent;
+  font-weight: weight(bold);
+}
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
