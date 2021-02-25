@@ -4,7 +4,7 @@ import BannerContent from "./bannerContent";
 import { useCarousel } from "./useCarousel";
 
 const Banner = () => {
-  const [state, dispatch] = useStore();
+  const [state] = useStore();
   const slides = state.bannerContent;
   const length = slides.length;
   const interval = 5000;
