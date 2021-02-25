@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./assets/base.scss";
 import { BrowserRouter as Router } from "react-router-dom";
-import {
-  bannerReducer,
-  initialBannerState,
-} from "../src/data_&_async requests/bannerReducer";
+// import {
+//   bannerReducer,
+//   initialBannerState,
+// } from "../src/data_&_async requests/bannerReducer";
 import reportWebVitals from "./reportWebVitals";
 import { StoreProvider } from "./data_&_async requests/store";
 
