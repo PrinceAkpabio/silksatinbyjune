@@ -1,4 +1,5 @@
 import bannerimage from "../assets/images/bannerImage.jpg";
+import aboutimage from "../assets/images/aboutImage.png";
 
 export const ACTIONS = {
   SCROLL_LEFT: "SCROLL_LEFT",
@@ -23,6 +24,12 @@ export const initialBannerState = {
       bannerText2: "COLLECTION",
     },
   ],
+  aboutContent: {
+    background: aboutimage,
+    title: "SilkSatin",
+    text:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad doloremque laborum, rem cumque maxime incidunt culpa, voluptate quae fuga consequatur deleniti deserunt quidem sequi! Praesentium placeat deleniti officia quasi.",
+  },
 };
 
 export const scrollLeft = (bannerContent) => ({
