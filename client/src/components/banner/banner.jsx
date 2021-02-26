@@ -1,10 +1,13 @@
-import React from "react";
-import { useStore } from "../../data_&_async requests/store";
+import React, { useReducer } from "react";
+import {
+  bannerReducer,
+  initialBannerState,
+} from "../../data_&_async requests/bannerReducer";
 import BannerContent from "./bannerContent";
 import { useCarousel } from "./useCarousel";
 
 const Banner = () => {
-  const [state] = useStore();
+  const [state] = useReducer(bannerReducer, initialBannerState);
   const slides = state.bannerContent;
   const length = slides.length;
   const interval = 5000;
