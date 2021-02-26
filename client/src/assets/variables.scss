@@ -36,14 +36,17 @@ $font-size: (
 }
 
 @mixin btn {
+  display: flex;
   width: 200px;
   height: 40px;
+  padding: 0 0.3rem;
   background-color: $accent;
   z-index: 1;
+  align-items: center;
+  justify-content: center;
   outline: none;
   border: none;
   color: $body-color;
-  border-radius: 5px;
   text-transform: uppercase;
   overflow: hidden;
   // transform: translateZ(0);
@@ -54,7 +57,6 @@ $font-size: (
   background-color: $primary;
   color: $accent;
   transform: scale(1.016);
-  border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
   @include transition-ease;

@@ -12,9 +12,9 @@
 
 html,
 body {
-  background-color: $primary;
+  background-color: $body-color;
   position: relative;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   color: $text-color;
   font-family: $font;
   // overflow-y:hidden;
@@ -58,4 +58,12 @@ a {
 .container {
   max-width: 75rem;
   margin: 0 auto;
+}
+
+.custom_btn {
+  @include btn;
+
+  &:hover {
+    @include btnHover;
+  }
 }
