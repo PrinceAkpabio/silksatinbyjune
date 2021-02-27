@@ -7,7 +7,10 @@ const Subscription = () => (
       <p>Get the latest updates on new products and upcoming sales</p>
     </span>
     <div className="subscription_input">
-      <input className="subscription_input_email" value="Your Email Address" />
+      <input
+        className="subscription_input_email"
+        placeholder="Your Email Address"
+      />
       <CustomButton>Subscribe</CustomButton>
     </div>
   </div>
