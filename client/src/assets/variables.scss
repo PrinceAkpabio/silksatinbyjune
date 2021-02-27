@@ -38,7 +38,7 @@ $font-size: (
 @mixin btn {
   display: flex;
   width: 200px;
-  height: 40px;
+  height: 50px;
   padding: 0 0.3rem;
   background-color: $accent;
   z-index: 1;
