@@ -1,18 +1,25 @@
-import shopItem1 from "../assets/images/shopItems (1).jpg";
-import shopItem2 from "../assets/images/shopItems (2).jpg";
-import shopItem3 from "../assets/images/shopItems (3).jpg";
-import shopItem4 from "../assets/images/shopItems (4).jpg";
-import shopItem5 from "../assets/images/shopItems (5).jpg";
+import shopItem1 from "../assets/images/shopItems1.jpg";
+import shopItem2 from "../assets/images/shopItems2.jpg";
+import shopItem3 from "../assets/images/shopItems3.jpg";
+import shopItem4 from "../assets/images/shopItems4.jpg";
+import shopItem5 from "../assets/images/shopItems5.jpg";
 
 export const SHOP_ACTIONS = {
   ADD_ITEM: "ADD_ITEM_TO_CART",
   CHANGE_ITEM_COLOR: "CHANGE_ITEM_COLOR",
+  NEXT: "NEXT",
+  PREV: "PREV",
 };
 
 export const initialShopState = {
   cart: {
     items: [],
   },
+  homepageShopContent: {
+    image: shopItem3,
+    text: "Shop the full collection",
+  },
+  slideIndex: 0,
   homepageShop: [
     {
       product_image: shopItem1,
@@ -68,6 +75,19 @@ export const shopReducer = (state, action) => {
       return {
         ...state,
         homepageShop: [...state.homepageShop],
+      };
+    case SHOP_ACTIONS.NEXT:
+      return {
+        ...state,
+        slideIndex: (state.slideIndex + 1) % state.homepageShop.length,
+      };
+    case SHOP_ACTIONS.PREV:
+      return {
+        ...state,
+        slideIndex:
+          state.slideIndex === 0
+            ? state.homepageShop.length - 1
+            : state.slideIndex - 1,
       };
     default:
       return state;
