@@ -148,4 +148,130 @@
       }
     }
   }
+
+  // HOMEPAGE SHOP
+
+  .homepage_shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .homepage_shop_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 400px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 2rem;
+      z-index: 34;
+
+      .custom_btn {
+        border-radius: 60px;
+        width: 300px;
+        margin: 0 1rem;
+        font-weight: weight(bold);
+      }
+    }
+  }
+
+  // SHOP SECTION SLIDER
+
+  .shop_slider {
+    display: grid;
+    position: relative;
+    // grid-gap: 2rem;
+    padding: 2rem 1.4rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    // @media screen and (min-width: 695px) {
+    //   grid-template-columns: 1fr 1fr;
+    // }
+    // @media screen and (min-width: 1025px) {
+    //   grid-template-columns: 1fr 1fr 1fr;
+    // }
+    .shop_slider_arrow {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      top: 40%;
+
+      &.prev {
+        left: 0;
+      }
+      &.next {
+        right: 0;
+      }
+    }
+    .shop_product_slide {
+      grid-area: 1 / -1;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+
+      &.slideInactive {
+        display: none;
+      }
+      &_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &_image,
+      &_details,
+      .shop_product_slide_colors,
+      .custom_btn {
+        margin-bottom: 1.5rem;
+      }
+
+      &_image {
+        height: 400px;
+        width: 295px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      &_colors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 250px;
+
+        &_item {
+          display: flex;
+          width: 50px;
+          height: 50px;
+          margin: 0 0.5rem;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          border: 0.5px solid black;
+          .shop_product_slide_colors_item_inner {
+            padding: 1.3rem;
+            margin: 0;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .custom_btn {
+        background-color: #f5f0ec;
+        color: $accent;
+        text-transform: none;
+
+        #shopping-bag {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
 }

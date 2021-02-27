@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import {
   shopReducer,
   initialShopState,
-} from "../data_&_async requests/shopReducer";
+} from "../../data_&_async requests/shopReducer";
 import ShopProduct from "./shop_product";
 const ShopCategory = () => {
   const [state, dispatch] = useReducer(shopReducer, initialShopState);
