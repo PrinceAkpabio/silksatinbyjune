@@ -3,6 +3,7 @@ import AboutSection from "../components/aboutSection";
 import Banner from "../components/banner/banner";
 import HomepageShop from "../components/homepage_shop";
 import ShopCategory from "../components/shop_category/shop_category";
+import Subscription from "../components/subscription";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <AboutSection />
       <ShopCategory />
       <HomepageShop />
+      <Subscription />
     </div>
   );
 };
