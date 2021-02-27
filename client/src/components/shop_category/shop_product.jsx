@@ -1,6 +1,6 @@
 import React from "react";
-import { CustomButton, ColorBtn } from "./custom_button";
-import bag from "../assets/images/shopping_bag.svg";
+import { CustomButton, ColorBtn } from "../custom_button";
+import bag from "../../assets/images/shopping_bag.svg";
 
 const ShopProduct = ({ product, dispatch }) => (
   <div className="shop_product">
