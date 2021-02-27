@@ -274,4 +274,40 @@
       }
     }
   }
+
+  // SUBSCRIPTION
+  .subscription {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 4rem;
+
+    .subscription_cta {
+      text-align: center;
+    }
+    .subscription_input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      @media screen and (min-width: 695px) {
+        flex-direction: row;
+      }
+      &_email {
+        border: 0.5px solid black;
+        color: #c5c1be;
+        width: 300px;
+        height: 50px;
+        padding-left: 0.5rem;
+      }
+      .custom_btn {
+        width: 302px;
+        font-weight: weight(bold);
+        @media screen and (min-width: 695px) {
+          height: 52px;
+        }
+      }
+    }
+  }
 }
