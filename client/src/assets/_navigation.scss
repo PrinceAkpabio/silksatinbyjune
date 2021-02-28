@@ -1,14 +1,21 @@
 .footer {
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   grid-template-columns: 1fr;
   background-color: $accent;
   color: #e5e5e5;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 2.5rem;
+  padding: 3rem 0;
   width: 100%;
+
+  .footer_item_one,
+  .footer_item_two,
+  #footer_divide {
+    width: 80%;
+    justify-self: center;
+  }
 
   .footer_item_one {
     display: grid;
@@ -37,7 +44,8 @@
       align-items: center;
       .footer_linkswrapper_title {
         color: $body-color;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
       }
       .footer_linkswrapper_links {
         display: grid;
@@ -58,10 +66,12 @@
             grid-template-columns: 1fr 1fr 1fr;
           }
         }
-
+        .footer_linkswrapper_links_contact {
+          font-weight: lighter;
+        }
         .footer_linkswrapper_links_social {
-          height: 35px;
-          width: 35px;
+          height: 30px;
+          width: 30px;
           color: #e5e5e5;
         }
       }
@@ -69,9 +79,53 @@
   }
 
   #footer_divide {
-    width: 90%;
     height: 1px;
     background-color: #e5e5e5;
     justify-self: center;
+  }
+
+  .footer_item_two {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    @media screen and (min-width: 695px) {
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer_item_two_title {
+      font-style: italic;
+      color: $body-color;
+    }
+
+    .footer_item_two_links {
+      display: flex;
+      .footer_item_two_links_item {
+        margin-right: 0.2rem;
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+      }
+      a {
+        font-size: fontSize(smallest-text);
+        font-weight: lighter;
+        margin-right: 0.2rem;
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+      }
+    }
+    .footer_item_two_trademark {
+      display: flex;
+      align-items: center;
+
+      font-size: fontSize(smallest-text);
+      font-weight: lighter;
+      h4 {
+        font-size: fontSize(smallest-text);
+        margin-right: 0.3rem;
+      }
+    }
   }
 }

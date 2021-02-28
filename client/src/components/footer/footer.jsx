@@ -7,7 +7,7 @@ import {
 
 const LinkWrapper = ({ wrapper }) => (
   <div className="footer_linkswrapper">
-    <h3 className="footer_linkswrapper_title">{wrapper.title}</h3>
+    <h4 className="footer_linkswrapper_title">{wrapper.title}</h4>
     <span
       className={`footer_linkswrapper_links ${
         wrapper.icon && `${wrapper.icon}`
@@ -16,7 +16,7 @@ const LinkWrapper = ({ wrapper }) => (
       {wrapper.links.map((link, i) =>
         link.name ? (
           <Link key={i} to={link.link}>
-            <p className="footer_linkswrapper_links_contact">{link.name}</p>
+            <h4 className="footer_linkswrapper_links_contact">{link.name}</h4>
           </Link>
         ) : (
           <Link key={i} to={link.link}>
@@ -31,9 +31,32 @@ const LinkWrapper = ({ wrapper }) => (
     </span>
   </div>
 );
+
+const LogoWrapper = ({ content }) => {
+  const today = new Date();
+  const utcYear = today.getUTCFullYear();
+  const { logo, links, trademark } = content;
+  return (
+    <>
+      <h3 className="footer_item_two_title">{logo}</h3>
+      <span className="footer_item_two_links">
+        {links.map((link, i) => (
+          <span className="footer_item_two_links_item" key={i}>
+            <Link to={link.link}>{link.name}</Link>
+            {link.line}
+          </span>
+        ))}
+      </span>
+      <span className="footer_item_two_trademark">
+        <h4>&copy;{utcYear}</h4>
+        {trademark}
+      </span>
+    </>
+  );
+};
 const Footer = () => {
   const [state] = useReducer(navigationReducer, initialFooterState);
-  const { linkWrapper } = state;
+  const { linkWrapper, logoWrapper } = state;
   return (
     <div className="footer">
       <div className="footer_item_one">
@@ -42,7 +65,9 @@ const Footer = () => {
         ))}
       </div>
       <span id="footer_divide" />
-      <div className="footer_item_two"></div>
+      <div className="footer_item_two">
+        {<LogoWrapper content={logoWrapper} />}
+      </div>
     </div>
   );
 };
