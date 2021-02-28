@@ -56,6 +56,15 @@ export const initialFooterState = {
       icon: "four",
     },
   ],
+  logoWrapper: {
+    logo: "SILKSATINBYJUNE",
+    links: [
+      { name: "ABOUT US", link: "#", line: "|" },
+      { name: "PRIVACY POLICY", link: "#", line: "|" },
+      { name: "LOCATIONS", link: "#" },
+    ],
+    trademark: "SILKSATINBYJUNE - AN ONLINE SLEEPWEAR",
+  },
 };
 
 export const navigationReducer = (state, action) => {
