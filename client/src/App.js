@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Footer from "./components/footer/footer";
 import HomePage from "./pages/home_page";
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
       </Switch>
+      <Footer />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 @import "./variables.scss";
 @import "./homepage";
+@import "./navigation";
 
 * {
   box-sizing: border-box;
@@ -52,7 +53,7 @@ p {
 }
 a {
   text-decoration: none;
-  color: $accent;
+  color: #e5e5e5;
   font-weight: weight(bold);
 }
 .container {
