@@ -5,11 +5,16 @@ import { CustomButton } from "./custom_button";
 
 const headerDetails = ["Home", "Shop", "page 1"];
 console.log(headerDetails.length);
-const PageInformation = () => {
+const PageInformation = ({ pagename }) => {
   return (
     <div className="pageinformation">
       <div className="pageinformation_header">
-        <h3 className="pageinformation_header_name">Store Products</h3>
+        {!pagename ? (
+          <h3 className="pageinformation_header_name">Store Products</h3>
+        ) : (
+          <h3 className="pageinformation_header_name">{pagename}</h3>
+        )}
+
         <span className="pageinformation_header_details">
           {headerDetails.map((page, i) => (
             <span key={i}>

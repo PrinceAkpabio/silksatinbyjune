@@ -20,6 +20,7 @@
       align-self: flex-start;
       .pageinformation_header_name {
         font-size: fontSize(small-text);
+        text-transform: capitalize;
       }
       .pageinformation_header_details {
         display: flex;
