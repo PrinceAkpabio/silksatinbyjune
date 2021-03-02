@@ -1,12 +1,19 @@
 import React from "react";
-import PageInformation from "../components/page_information";
-import ShopCategory from "../components/shop_category/shop_category";
+import { Switch, useRouteMatch, Route } from "react-router-dom";
+import ShopPageCategory from "../components/shop_page_category";
 
 const ShopPage = () => {
+  const { path } = useRouteMatch();
   return (
-    <div className="shoppage container">
-      <PageInformation />
-      <ShopCategory />
+    <div>
+      <Switch>
+        <Route exact path={path}>
+          <ShopPageCategory />
+        </Route>
+        <Route path={`${path}/:shopId`}>
+          <ShopPageCategory />
+        </Route>
+      </Switch>
     </div>
   );
 };
